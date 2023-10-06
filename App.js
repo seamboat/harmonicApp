@@ -37,6 +37,7 @@ export default function App() {
     if (Enable == "Gb")
     {
       onValueChange = setText("\n B Harmonica in 2nd Position")
+    }
     if (Enable == "G")
     {
       onValueChange = setText("\n C Harmonica in 2nd Position")
@@ -57,9 +58,7 @@ export default function App() {
     {
       onValueChange = setText("\n E Harmonica in 2nd Position")
     }
-    }
   }
-
   
   return (
     <SafeAreaView style={styles.container}>
@@ -100,7 +99,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
-    marginTop: 40,
     backgroundColor: 'black'
 
   },
