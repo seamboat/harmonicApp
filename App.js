@@ -3,58 +3,62 @@ import { StyleSheet, Button, Text, Image, SafeAreaView} from 'react-native';
 import {Picker} from "@react-native-picker/picker";
 export default function App() {
   
-  const [Enable , setEnable]  = useState("courses");
+  const [key , setKey]  = useState("");
 
   const [text, setText] = useState("");
 
 
 
   function myFunction(){
-    if (Enable == "C")
+    if (key == "Please Select Key")
+    {
+      onValueChange = setText("")
+    }
+    if (key == "C")
     {
       onValueChange = setText("\n F Harmonica in 2nd Position")
     }
-    if (Enable == "Db")
+    if (key == "Db")
     {
       onValueChange = setText("\n Gb Harmonica in 2nd Position")
     }
-    if (Enable == "D")
+    if (key == "D")
     {
       onValueChange = setText("\n G Harmonica in 2nd Position")
     }
-    if (Enable == "Eb")
+    if (key == "Eb")
     {
       onValueChange = setText("\n Ab Harmonica in 2nd Position")
     }
-    if (Enable == "E")
+    if (key == "E")
     {
       onValueChange = setText("\n A Harmonica in 2nd Position")
     }
-    if (Enable == "F")
+    if (key == "F")
     {
       onValueChange = setText("\n Bb Harmonica in 2nd Position")
     }
-    if (Enable == "Gb")
+    if (key == "Gb")
     {
       onValueChange = setText("\n B Harmonica in 2nd Position")
     }
-    if (Enable == "G")
+    if (key == "G")
     {
       onValueChange = setText("\n C Harmonica in 2nd Position")
     }
-    if (Enable == "Ab")
+    if (key == "Ab")
     {
       onValueChange = setText("\n Db Harmonica in 2nd Position")
     }
-    if (Enable == "A")
+    if (key == "A")
     {
       onValueChange = setText("\n D Harmonica in 2nd Position")
     }
-    if (Enable == "Bb")
+    if (key == "Bb")
     {
       onValueChange = setText("\n Eb Harmonica in 2nd Position")
     }
-    if (Enable == "B")
+    if (key == "B")
     {
       onValueChange = setText("\n E Harmonica in 2nd Position")
     }
@@ -68,10 +72,10 @@ export default function App() {
   
       <Text style={{color: 'white'}}>Which key are we in?</Text>
       <Picker
-          selectedValue={Enable}
+          selectedValue={key}
           style={{ height: 50, width: 250, backgroundColor: 'white', marginTop: 20, marginBottom: 20}}
           mode={"dialog"}
-          onValueChange={(itemValue) => setEnable(itemValue)}
+          onValueChange={(itemValue) => setKey(itemValue)}
         >
           <Picker.Item label="Please Select Key" value="Please Select Key"/>
           <Picker.Item label="C" value="C" />
